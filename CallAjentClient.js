@@ -196,7 +196,7 @@ function handleLogin(success) {
         }, function (error) {
             console.log(error);
         });
-          setTimeout(function () { document.getElementById("callBtn").click(); }, 1000);
+          //setTimeout(function () { document.getElementById("callBtn").click(); }, 1000);
     }
 };
 
