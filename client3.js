@@ -283,14 +283,7 @@ function clearphoto() {
 // format data URL. By drawing it on an offscreen canvas and then
 // drawing that to the screen, we can change its size and/or apply
 // other changes before drawing it.
-function ignoreFavicon(req, res, next) {
-  if (req.originalUrl === '/favicon.ico') {
-    res.status(204).json({nope: true});
-  } else {
-    next();
-  }
-}
-app.use(ignoreFavicon);
+
 function takepicture() {
     var context = canvas.getContext('2d');
     if (width && height) {
