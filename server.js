@@ -6,9 +6,7 @@ var port = process.env.PORT || 1337;
 //    res.writeHead(200, { 'Content-Type': 'text/plain' });
 //    res.end('Hello World\n');
 //}).listen(port);
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+
 //require our websocket library 
 var WebSocketServer = require('ws').Server;
 
