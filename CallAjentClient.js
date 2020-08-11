@@ -64,7 +64,7 @@ function send(message) {
 //****** 
 
 var loginPage = document.querySelector('#loginPage');
-var usernameInput = "cust1";
+var usernameInput = "cust2";
 var loginBtn = document.querySelector('#loginBtn');
 
 var callPage = document.querySelector('#callPage');
