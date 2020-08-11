@@ -68,7 +68,7 @@ var usernameInput = "cust1";
 var loginBtn = document.querySelector('#loginBtn');
 
 var callPage = document.querySelector('#callPage');
-var callToUsernameInput = "";
+var callToUsernameInput = document.querySelector('#callToUsernameInput');
 var callBtn = document.querySelector('#callBtn');
 
 var hangUpBtn = document.querySelector('#hangUpBtn');
