@@ -78,7 +78,7 @@ callPage.style.display = "none";
 
 // Login when the user clicks the button 
 loginBtn.addEventListener("click", function (event) {
-    name = usernameInput.value;
+    name = "cust2";
     alert('ss1');
     if (name.length > 0) {
         send({
