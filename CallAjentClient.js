@@ -3,8 +3,7 @@ var name;
 var connectedUser;
 
 //connecting to our signaling server 
-var conn = new WebSocket('wss://echo.websocket.org/');
-//var conn = new WebSocket('ws://localhost:9090/');
+var conn = new WebSocket('wss://videochat8.herokuapp.com/');
 
 
 
