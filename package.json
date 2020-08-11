@@ -7,7 +7,7 @@
     "name": ""
   },
   "dependencies": {
-    "webrtc-adapter": "^7.6.3",
+    "webrtc-adapter": "^7.7.0",
     "ws": "^7.3.1"
   }
 }
