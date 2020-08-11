@@ -128,18 +128,46 @@ function handleLogin(success) {
         //else {
         //    console.log('Not Found..');
         //}
-        //navigator.getUserMedia({ video: { width: 320, height: 240 }, audio: false }, function (myStream) {
-
-        navigator.webkitGetUserMedia({ video: { width: 320, height: 240 }, audio: true }, function (myStream) {
+        //navigator.webkitGetUserMedia({ video: { width: 320, height: 240 }, audio:  false , function (myStream) {
+        navigator.getUserMedia({ video: { width: 320, height: 240 }, audio: {
+        echoCancellation: false,
+                                                noiseSuppression: false,
+                                                autoGainControl: false,
+                                                mozNoiseSuppression: false,
+                                                mozAutoGainControl: false
+    } }, function (myStream) {
             stream = myStream;
 
             //displaying local video stream on the page 
             //localVideo.src = stream; //window.URL.createObjectURL(stream);
             localVideo.srcObject = stream;
             //using Google public stun server 
-            var configuration = {
+                                    var configuration = {
                 "iceServers": [{ "url": "stun:stun2.1.google.com:19302","url": "stun:stun.services.mozilla.com" },{
-
+    url: 'turn:numb.viagenie.ca',
+    credential: 'muazkh',
+    username: 'webrtc@live.com'
+},
+{
+    url: 'turn:192.158.29.39:3478?transport=udp',
+    credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+    username: '28224511:1379330808'
+},
+{
+    url: 'turn:192.158.29.39:3478?transport=tcp',
+    credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+    username: '28224511:1379330808'
+},
+{
+    url: 'turn:turn.bistri.com:80',
+    credential: 'homeo',
+    username: 'homeo'
+ },
+ {
+    url: 'turn:turn.anyfirewall.com:443?transport=tcp',
+    credential: 'webrtc',
+    username: 'webrtc'
+}]
             };
 
             yourConn = new webkitRTCPeerConnection(configuration);
