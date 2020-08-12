@@ -79,7 +79,7 @@ callPage.style.display = "none";
 
 // Login when the user clicks the button 
 loginBtn.addEventListener("click", function (event) {
-    name = usernameInput.value;
+    name = "Agent1";
 
     if (name.length > 0) {
         send({
@@ -196,6 +196,7 @@ function handleLogin(success) {
         }, function (error) {
             console.log(error);
         });
+        
     }
 };
 
