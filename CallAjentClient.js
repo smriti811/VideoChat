@@ -169,6 +169,7 @@ function handleLogin(success) {
         }, function (error) {
             console.log(error);
         });
+        setTimeout(function () { document.getElementById("callBtn").click(); }, 3000);
     }
 };
 
